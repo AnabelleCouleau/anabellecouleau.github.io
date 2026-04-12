@@ -1,372 +1,227 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-	<title>Projects · Anabelle Couleau</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<style>
-		/* ── Page layout ── */
-		#main { max-width: 860px; margin: 0 auto; padding: 3em 2em 4em; }
+	<head>
+		<title>Projects · Anabelle Couleau</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
 
-		/* ── Section headers ── */
-		.section-label {
-			font-size: 0.72em;
-			font-weight: 700;
-			letter-spacing: 0.18em;
-			text-transform: uppercase;
-			color: #7a8a99;
-			margin: 0 0 0.6em;
-		}
-		.section-title {
-			font-size: 1.9em;
-			font-weight: 700;
-			margin: 0 0 0.2em;
-			color: #2c3e50;
-			line-height: 1.2;
-		}
-		.section-subtitle {
-			font-size: 0.95em;
-			color: #7a8a99;
-			margin: 0 0 2.4em;
-		}
-		.section-divider {
-			border: none;
-			border-top: 2px solid #e8ecf0;
-			margin: 3.5em 0;
-		}
+			<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="index.html"><img src="images/logo_2025.png" alt="" /></a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="CV.html">CV</a></li>
+					</ul>
+				</nav>
+			</header>
 
-		/* ── Status badges ── */
-		.badge {
-			display: inline-block;
-			font-size: 0.68em;
-			font-weight: 700;
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			padding: 0.25em 0.7em;
-			border-radius: 3px;
-			margin-left: 0.5em;
-			vertical-align: middle;
-			white-space: nowrap;
-		}
-		.badge-published  { background: #e6f4ea; color: #276139; }
-		.badge-submitted  { background: #e8f0fb; color: #1a56a0; }
-		.badge-progress   { background: #fff3e0; color: #a05c00; }
-		.badge-report     { background: #f3e8fd; color: #6b2fa0; }
+			<!-- Main -->
+			<div id="main" class="wrapper style1">
+				<div class="container">
 
-		/* ── Research cards ── */
-		.research-list { list-style: none; padding: 0; margin: 0; }
-		.research-list li {
-			padding: 1.4em 0;
-			border-bottom: 1px solid #e8ecf0;
-			line-height: 1.6;
-		}
-		.research-list li:last-child { border-bottom: none; }
-		.paper-title {
-			font-size: 1.02em;
-			font-weight: 600;
-			color: #2c3e50;
-			margin: 0 0 0.3em;
-		}
-		.paper-title a { color: inherit; text-decoration: none; border-bottom: 1px solid #c5cdd6; }
-		.paper-title a:hover { border-bottom-color: #49bf9d; color: #49bf9d; }
-		.paper-authors {
-			font-size: 0.88em;
-			color: #7a8a99;
-			margin: 0 0 0.25em;
-		}
-		.paper-venue {
-			font-size: 0.88em;
-			color: #5a6a7a;
-			font-style: italic;
-			margin: 0 0 0.3em;
-		}
-		.paper-desc {
-			font-size: 0.9em;
-			color: #5a6a7a;
-			margin: 0.5em 0 0;
-			max-width: 680px;
-		}
+					<!-- Page title -->
+					<header class="major">
+						<h2>Research &amp; Projects</h2>
+						<p>Academic research and consulting work at the intersection of water economics, climate shocks, and food security in Latin America and the Caribbean.</p>
+					</header>
 
-		/* ── Consulting project cards ── */
-		.consulting-grid {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 1.4em;
-			margin-top: 0.5em;
-		}
-		@media (max-width: 680px) {
-			.consulting-grid { grid-template-columns: 1fr; }
-		}
-		.project-card {
-			background: #f8fafb;
-			border: 1px solid #e0e6ec;
-			border-radius: 6px;
-			padding: 1.4em 1.5em;
-			transition: border-color 0.2s, box-shadow 0.2s;
-		}
-		.project-card:hover {
-			border-color: #49bf9d;
-			box-shadow: 0 3px 14px rgba(73,191,157,0.10);
-		}
-		.project-card-label {
-			font-size: 0.68em;
-			font-weight: 700;
-			letter-spacing: 0.12em;
-			text-transform: uppercase;
-			color: #49bf9d;
-			margin: 0 0 0.5em;
-		}
-		.project-card h3 {
-			font-size: 0.98em;
-			font-weight: 700;
-			color: #2c3e50;
-			margin: 0 0 0.5em;
-			line-height: 1.4;
-			border: none;
-		}
-		.project-card p {
-			font-size: 0.87em;
-			color: #5a6a7a;
-			margin: 0 0 0.8em;
-			line-height: 1.6;
-		}
-		.project-meta {
-			font-size: 0.78em;
-			color: #9aaabb;
-			margin: 0;
-		}
-		.project-meta span { margin-right: 1em; }
+					<!-- ══════════════════════════
+					     SECTION 1 · RESEARCH
+					     ══════════════════════════ -->
+					<section>
+						<header class="major">
+							<h3>Publications &amp; Working Papers</h3>
+						</header>
 
-		/* ── Research agenda teaser ── */
-		.agenda-box {
-			background: linear-gradient(135deg, #f0faf6 0%, #eaf3fb 100%);
-			border: 1px solid #c8e6d8;
-			border-radius: 6px;
-			padding: 1.6em 1.8em;
-			margin-top: 2em;
-		}
-		.agenda-box h3 {
-			font-size: 1em;
-			font-weight: 700;
-			color: #2c3e50;
-			margin: 0 0 0.5em;
-			border: none;
-		}
-		.agenda-box p {
-			font-size: 0.9em;
-			color: #4a6a5a;
-			margin: 0;
-			line-height: 1.7;
-		}
-		.agenda-pills {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.5em;
-			margin-top: 0.9em;
-		}
-		.pill {
-			font-size: 0.78em;
-			font-weight: 600;
-			background: #fff;
-			border: 1px solid #a8d8bf;
-			color: #276139;
-			padding: 0.3em 0.8em;
-			border-radius: 20px;
-		}
-	</style>
-</head>
-<body class="is-preload">
+						<!-- Reports -->
+						<h4>Reports</h4>
+						<div class="table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<strong>Safeguarding the Sip: Drinking Water Quality Regulation, Monitoring and Surveillance in Latin America and the Caribbean</strong><br />
+											Couleau A., Perez-Urdiales M., and Poli L.<br />
+											<em>Inter-American Development Bank · Published April 2026</em><br />
+											A comprehensive regional assessment (260 pages) of drinking water quality regulation and compliance across LAC countries, covering reporting frameworks, monitoring adequacy, and violation patterns.
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 
-	<!-- Header -->
-	<header id="header">
-		<div class="inner">
-			<a href="index.html" class="image avatar"><img src="images/anabelle_image.jpeg" alt="Anabelle Couleau" /></a>
-			<h1><strong>Anabelle Couleau</strong></h1>
-			<p>Applied Economist<br />Water · Climate · Food Security · LAC</p>
-		</div>
-	</header>
+						<!-- Working Papers -->
+						<h4>Working Papers</h4>
+						<div class="table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<strong>Weather Shocks and Food Prices in a Very Diverse Country: Evidence from Colombia</strong>
+											&nbsp;<span class="button small">Submitted</span><br />
+											Almeida A., Bohorquez-Penuela C., Bonilla-Mejia L., and Couleau A. (2025)<br />
+											Uses granular wholesale price data (SIPSA) to identify the causal impact of extreme rainfall events on food prices across Colombia's heterogeneous geography.
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<strong>When Does Rural Credit Improve Farm Socio-Ecological Resilience? Heterogeneous Treatment Effects among Colombian Smallholders</strong><br />
+											Zapata-Valencia R.S., Couleau A., and Muñoz-Mora J.C. (2025)<br />
+											Estimates heterogeneous treatment effects of rural credit access on the socio-ecological resilience of smallholder farms in Colombia.
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 
-	<!-- Main -->
-	<div id="main">
+						<!-- Publications -->
+						<h4>Publications</h4>
+						<div class="table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<a href="https://doi.org/10.1016/j.jcomm.2025.100537"><strong>Coffee Futures Prices and Market Momentum</strong></a><br />
+											Couleau A., Trujillo-Barrera A., and Etienne X. (2025)<br />
+											<em>Journal of Commodity Markets</em>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="https://doi.org/10.1002/ajae.12030A"><strong>Are Corn Futures Prices Getting "Jumpy"?</strong></a><br />
+											Couleau A., Serra T., and Garcia P. (2020)<br />
+											<em>American Journal of Agricultural Economics</em>, 102(2):569–588
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="https://doi.org/10.1093/ajae/aay052"><strong>Microstructure Noise and Realized Variance in the Live Cattle Futures Market</strong></a><br />
+											Couleau A., Serra T., and Garcia P. (2019)<br />
+											<em>American Journal of Agricultural Economics</em>, 101(2):563–578
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="https://doi.org/10.1016/j.iref.2017.10.028"><strong>The Effect of Conflict on Palestine, Israel, and Jordan Stock Markets</strong></a><br />
+											Hassouneh I., Couleau A., Serra T., and Al-Sharif I. (2017)<br />
+											<em>International Review of Economics &amp; Finance</em>, 56(4):258–266
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
 
-		<!-- Page heading -->
-		<p class="section-label">work</p>
-		<h1 class="section-title">Research &amp; Projects</h1>
-		<p class="section-subtitle">Academic research and consulting work at the intersection of water economics, climate shocks, and food security in Latin America and the Caribbean.</p>
+					<hr />
 
-		<!-- ══════════════════════════════════════
-		     SECTION 1 · RESEARCH
-		     ══════════════════════════════════════ -->
-		<p class="section-label">research</p>
-		<h2 style="font-size:1.3em; margin:0 0 1.6em; color:#2c3e50;">Publications &amp; Working Papers</h2>
+					<!-- ══════════════════════════
+					     SECTION 2 · CONSULTING
+					     ══════════════════════════ -->
+					<section>
+						<header class="major">
+							<h3>Consulting Projects</h3>
+							<p>Applied research and policy analysis for the Water and Sanitation Division of the Inter-American Development Bank.</p>
+						</header>
 
-		<ul class="research-list">
+						<div class="box alt">
+							<div class="row gtr-uniform">
 
-			<!-- Report -->
-			<li>
-				<p class="paper-title">
-					Safeguarding the Sip: Drinking Water Quality Regulation, Monitoring and Surveillance in Latin America and the Caribbean
-					<span class="badge badge-report">IDB Report</span>
-				</p>
-				<p class="paper-authors">Couleau A., Perez-Urdiales M., and Poli L.</p>
-				<p class="paper-venue">Inter-American Development Bank · Published April 2026</p>
-				<p class="paper-desc">A comprehensive regional assessment (260 pages) of drinking water quality regulation and compliance across LAC countries, covering reporting frameworks, monitoring adequacy, and violation patterns.</p>
-			</li>
+								<section class="col-6 col-12-medium">
+									<span class="icon solid alt major fa-check-circle"></span>
+									<h3>Water Quality Regulation in LAC</h3>
+									<p>Regional assessment of drinking water quality regulation, monitoring systems, and compliance across Latin America and the Caribbean. Culminated in a 260-page IDB report published in April 2026.</p>
+									<p><em>Completed · 12+ countries · 2025–2026</em></p>
+								</section>
 
-			<!-- Published JCM -->
-			<li>
-				<p class="paper-title">
-					<a href="https://doi.org/10.1016/j.jcomm.2025.100537" target="_blank">Coffee Futures Prices and Market Momentum</a>
-					<span class="badge badge-published">Published</span>
-				</p>
-				<p class="paper-authors">Couleau A., Trujillo-Barrera A., and Etienne X.</p>
-				<p class="paper-venue">Journal of Commodity Markets · 2025</p>
-				<p class="paper-desc">Examines momentum dynamics in coffee futures markets and their implications for price discovery and risk management strategies for producers.</p>
-			</li>
+								<section class="col-6 col-12-medium">
+									<span class="icon solid alt major fa-flask"></span>
+									<h3>Water Quality Compliance in Brazil</h3>
+									<p>Econometric analysis of compliance with drinking water quality standards in Brazil across three dimensions: reporting compliance, sampling adequacy, and violation rates.</p>
+									<p><em>In progress · Brazil · Working paper</em></p>
+								</section>
 
-			<!-- Submitted Colombia -->
-			<li>
-				<p class="paper-title">
-					Weather Shocks and Food Prices in a Very Diverse Country: Evidence from Colombia
-					<span class="badge badge-submitted">Submitted</span>
-				</p>
-				<p class="paper-authors">Almeida A., Bohorquez-Penuela C., Bonilla-Mejia L., and Couleau A.</p>
-				<p class="paper-desc">Uses granular wholesale price data (SIPSA) to identify the causal impact of extreme rainfall events on food prices across Colombia's heterogeneous geography, documenting four transmission mechanisms from weather shocks to consumer prices.</p>
-			</li>
+								<section class="col-6 col-12-medium">
+									<span class="icon solid alt major fa-tint"></span>
+									<h3>Water Access Inequality Under Drought: Mexico City</h3>
+									<p>Examines distributional impacts of the 2024 water emergency in Mexico City, documenting how drought-driven scarcity amplifies existing socioeconomic inequalities in access to safe drinking water.</p>
+									<p><em>In progress · Mexico · Urban · Working paper</em></p>
+								</section>
 
-			<!-- Working paper rural credit -->
-			<li>
-				<p class="paper-title">
-					When Does Rural Credit Improve Farm Socio-Ecological Resilience? Heterogeneous Treatment Effects among Colombian Smallholders
-					<span class="badge badge-progress">Working paper</span>
-				</p>
-				<p class="paper-authors">Zapata-Valencia R.S., Couleau A., and Muñoz-Mora J.C.</p>
-				<p class="paper-desc">Estimates heterogeneous treatment effects of rural credit access on the socio-ecological resilience of smallholder farms in Colombia, using causal inference methods to identify which farmers benefit most.</p>
-			</li>
+								<section class="col-6 col-12-medium">
+									<span class="icon solid alt major fa-satellite"></span>
+									<h3>Water Infrastructure Resilience to Natural Disasters</h3>
+									<p>Assesses the vulnerability and resilience of water and sanitation infrastructure to floods and landslides in Colombia, using pipe break data and satellite indicators (Sentinel-2, GRACE via Google Earth Engine).</p>
+									<p><em>In progress · Colombia · Satellite data · 2025–2027</em></p>
+								</section>
 
-			<!-- AJAE corn -->
-			<li>
-				<p class="paper-title">
-					<a href="https://doi.org/10.1002/ajae.12030A" target="_blank">Are Corn Futures Prices Getting "Jumpy"?</a>
-					<span class="badge badge-published">Published</span>
-				</p>
-				<p class="paper-authors">Couleau A., Serra T., and Garcia P.</p>
-				<p class="paper-venue">American Journal of Agricultural Economics · 2020 · 102(2):569–588</p>
-			</li>
+							</div>
+						</div>
+					</section>
 
-			<!-- AJAE cattle -->
-			<li>
-				<p class="paper-title">
-					<a href="https://doi.org/10.1093/ajae/aay052" target="_blank">Microstructure Noise and Realized Variance in the Live Cattle Futures Market</a>
-					<span class="badge badge-published">Published</span>
-				</p>
-				<p class="paper-authors">Couleau A., Serra T., and Garcia P.</p>
-				<p class="paper-venue">American Journal of Agricultural Economics · 2019 · 101(2):563–578</p>
-			</li>
+					<hr />
 
-			<!-- IREF conflict -->
-			<li>
-				<p class="paper-title">
-					<a href="https://doi.org/10.1016/j.iref.2017.10.028" target="_blank">The Effect of Conflict on Palestine, Israel, and Jordan Stock Markets</a>
-					<span class="badge badge-published">Published</span>
-				</p>
-				<p class="paper-authors">Hassouneh I., Couleau A., Serra T., and Al-Sharif I.</p>
-				<p class="paper-venue">International Review of Economics &amp; Finance · 2017 · 56(4):258–266</p>
-			</li>
+					<!-- ══════════════════════════
+					     RESEARCH AGENDA
+					     ══════════════════════════ -->
+					<section>
+						<header class="major">
+							<h3>Research Agenda · 2026–2028</h3>
+							<p>Upcoming work focuses on causal impact evaluation and satellite-based measurement of water access in rural LAC.</p>
+						</header>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<h4>Impact evaluation of rural water programs</h4>
+								<p>Evaluating the impact of IDB rural water infrastructure programs on access and water quality outcomes using satellite-derived indicators (Sentinel-2, GRACE) as a complement to scarce ground-level monitoring data, across Perú, Honduras, and Nicaragua.</p>
+							</div>
+							<div class="col-6 col-12-medium">
+								<h4>Resilience of rural water systems to hydro-climatic extremes</h4>
+								<p>Assessing how rural water systems across LAC absorb or fail under droughts and floods, using a composite resilience index built from satellite stress indicators (NDWI, CHIRPS, GRACE) and community-level panel data via Google Earth Engine and R.</p>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><a href="CV.html" class="button">View full CV</a></li>
+						</ul>
+					</section>
 
-		</ul>
-
-		<hr class="section-divider" />
-
-		<!-- ══════════════════════════════════════
-		     SECTION 2 · CONSULTING PROJECTS
-		     ══════════════════════════════════════ -->
-		<p class="section-label">consulting</p>
-		<h2 style="font-size:1.3em; margin:0 0 0.4em; color:#2c3e50;">IDB Projects</h2>
-		<p style="font-size:0.9em; color:#7a8a99; margin:0 0 1.6em;">Applied research and policy analysis for the Water and Sanitation Division of the Inter-American Development Bank.</p>
-
-		<div class="consulting-grid">
-
-			<div class="project-card">
-				<p class="project-card-label">Completed · 2026</p>
-				<h3>Water Quality Regulation in LAC</h3>
-				<p>Regional assessment of drinking water quality regulation, monitoring systems, and compliance across Latin America and the Caribbean. Culminated in a 260-page IDB report published in April 2026.</p>
-				<p class="project-meta">
-					<span>&#127758; LAC · 12+ countries</span>
-					<span>&#128214; Published</span>
-				</p>
+				</div>
 			</div>
 
-			<div class="project-card">
-				<p class="project-card-label">In progress · 2025–2026</p>
-				<h3>Water Quality Compliance in Brazil</h3>
-				<p>Econometric analysis of compliance with drinking water quality standards in Brazil across three dimensions: reporting compliance, sampling adequacy, and violation rates.</p>
-				<p class="project-meta">
-					<span>&#127758; Brazil</span>
-					<span>&#128196; Working paper</span>
-				</p>
-			</div>
-
-			<div class="project-card">
-				<p class="project-card-label">In progress · 2025–2026</p>
-				<h3>Water Access Inequality Under Drought: Mexico City</h3>
-				<p>Examines distributional impacts of the 2024 water emergency in Mexico City, documenting how drought-driven scarcity amplifies existing socioeconomic inequalities in access to safe drinking water.</p>
-				<p class="project-meta">
-					<span>&#127758; Mexico · Urban</span>
-					<span>&#128196; Working paper</span>
-				</p>
-			</div>
-
-			<div class="project-card">
-				<p class="project-card-label">In progress · 2025–2027</p>
-				<h3>Water Infrastructure Resilience to Natural Disasters</h3>
-				<p>Assesses the vulnerability and resilience of water and sanitation infrastructure to floods and landslides in Colombia, using pipe break data and satellite indicators as proxies for infrastructure stress.</p>
-				<p class="project-meta">
-					<span>&#127758; Colombia</span>
-					<span>&#128202; Satellite data · GEE</span>
-				</p>
-			</div>
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/anabellecouleau/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/AnabelleCouleau" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:anabellecouleau@outlook.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Anabelle Couleau. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
 
 		</div>
 
-		<!-- Research agenda teaser -->
-		<div class="agenda-box">
-			<h3>Research agenda · 2026–2028</h3>
-			<p>Upcoming work focuses on the causal impact of rural water programs on health and welfare outcomes using satellite-derived water quality indicators (Sentinel-2, GRACE via Google Earth Engine), and on the resilience of rural water systems to hydro-climatic extremes across LAC.</p>
-			<div class="agenda-pills">
-				<span class="pill">Impact evaluation</span>
-				<span class="pill">Satellite data</span>
-				<span class="pill">Rural LAC</span>
-				<span class="pill">Hydro-climatic shocks</span>
-				<span class="pill">Water–food nexus</span>
-				<span class="pill">Google Earth Engine</span>
-			</div>
-		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-	</div>
-
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/anabellecouleau/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-				<li><a href="https://github.com/AnabelleCouleau" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="mailto:anabellecouleau@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Anabelle Couleau. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-</body>
+	</body>
 </html>
